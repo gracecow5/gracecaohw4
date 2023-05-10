@@ -22,10 +22,6 @@ function fnameValidation(){
     }
 }
 
-function minitialValidation(){
-    minitial = document.getElementById('minitial').value;
-    var initialPattern = /^[A-Z]/;
-
 function minitialValidation() {
   const minitial = document.getElementById("minitial").value.trim();
   const initialPattern = /^[A-Z]{0,1}$/;
