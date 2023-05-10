@@ -26,18 +26,18 @@ function minitialValidation(){
     minitial = document.getElementById('minitial').value;
     var initialPattern = /^[A-Z]/;
 
-    if(minitial != ''){
-        if(!minitial.match(initialPattern)){
-            document.getElementById("minitial-error").innerHTML = "Capital letters only.";
-            return false;
-        }else if (minitial.length > 1){
-            document.getElementById("minitial-error").innerHTML = "Must not exceed 1 character";
-            return false;
-        }else {
-            document.getElementById("minitial-error").innerHTML = "";
-            return true;
-        }
-    }
+function minitialValidation() {
+  const minitial = document.getElementById("minitial").value.trim();
+  const initialPattern = /^[A-Z]{0,1}$/;
+
+  if (!initialPattern.test(minitial)) {
+    document.getElementById("minitial-error").innerHTML =
+      "Middle initial must be a single capital letter.";
+    return false;
+  } else {
+    document.getElementById("minitial-error").innerHTML = "";
+    return true;
+  }
 }
 
 function lnameValidation() {
